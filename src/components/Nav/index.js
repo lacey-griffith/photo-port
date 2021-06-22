@@ -45,7 +45,7 @@ const Nav = () => {
                     </li>
                     {categories.map((category) => (
                         <li className='mx-1' key={category.name}>
-                            <span onClick={() => categorySelected(category.name)}>
+                            <span onClick={() => handleClick(category.name)}>
                                 {capitalizeFirstLetter(category.name)}
                             </span>
                         </li>
