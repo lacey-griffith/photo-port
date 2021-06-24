@@ -1,18 +1,22 @@
 import React from 'react';
+import { capitalizeFirstLetter } from '../../utils/helpers';
+import PhotoList from '../PhotoList'
 
-const Gallery = (props) => {
-    const currentCategory = {
-        name: 'commercial',
-        description: 'Photos of grocery stores, food trucks, and other commerical projects.'
-    }
+const Gallery = ({currentCategory}) => {
+    console.log({currentCategory})
+    const {name, description} = currentCategory
+
     return(
         <section>
-            <h1>
-                {currentCategory.name}
+            <h1 data-testid='h1tag'>
+                {capitalizeFirstLetter(name)}
             </h1>
             <p>
-                {currentCategory.description}
+                {description}
             </p>
+            <PhotoList 
+            category= {currentCategory.name}
+            />
         </section>
     )
 }
