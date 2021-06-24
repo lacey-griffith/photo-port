@@ -3,7 +3,6 @@ import { capitalizeFirstLetter } from '../../utils/helpers';
 import PhotoList from '../PhotoList'
 
 const Gallery = ({currentCategory}) => {
-    console.log({currentCategory})
     const {name, description} = currentCategory
 
     return(
